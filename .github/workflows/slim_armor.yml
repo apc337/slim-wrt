@@ -39,7 +39,8 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/slim-wrt
         echo "build with profile ${{ matrix.slim_profile }}"
-        make SLIM_CFG_PROFILE=${{ matrix.slim_profile }} showtime
+        make SLIM_CFG_PROFILE=slim showtime
+        #make SLIM_CFG_PROFILE=${{ matrix.slim_profile }} showtime
 
     - name: Show vermagic and kernel config
       run: |
